@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="um formulario">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Login LifeJourney</title>
+
+  <style>
+    .logon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 600px;
+    }
+    </style>
+
+
+</head>
+<body>
+
+<section class="logon" >    
+  <form id="loginForm">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required><br><br>
+    <label for="password">Senha:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <button class="button2" type="submit" >Entrar</button>
+  </form>
+</section>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      fetch(`http://wheelkorner.com.br:21142/api/journeymail/${email}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Falha ao buscar o usuário');
+        }
+      })
+      .then(data => {
+        if (data.result && data.result.senha === password) {
+          console.log('Autenticação bem-sucedida');
+          // const params = new URLSearchParams(data.result).toString();
+          // window.location.href = `lifejourney2024.html?${params}`;
+          sessionStorage.setItem('dadosLogin', JSON.stringify(data.result)); 
+          window.location.href = 'lifejourney2024.html';
+        } else {
+          console.log('Credenciais inválidas');
+          window.location.href = 'error.html';
+        }
+      })
+      .catch(error => {
+        console.error('Erro de login:', error);
+      });
+    });
+  </script>
+</body>
+</html>

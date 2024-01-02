@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="um formulario">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Cadastro LifeJourney</title>
+
+<style>
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.button2 {
+    width: 80%;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<section class="cadastro" >
+    <form id="cadastroForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br>
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required><br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required><br>
+
+        <button class="button2" type="submit">Cadastre-se</button>
+      </form>
+</section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script>
+    document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const data = new URLSearchParams();
+      data.append('nome', document.getElementById('nome').value);
+      data.append('email', document.getElementById('email').value);
+      data.append('telefone', document.getElementById('telefone').value);
+      data.append('senha', document.getElementById('senha').value);
+
+      axios.post('http://wheelkorner.com.br:21142/api/journey/', data, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      })
+      .then(response => {
+        console.log('Cadastro realizado com sucesso:', response.data);
+        const dados = response.data.result; // Dados retornados do POST
+        localStorage.setItem('dadosCadastro', JSON.stringify(dados)); // Armazenar dados no localStorage
+        const params = new URLSearchParams(dados).toString(); // Criar os parâmetros da URL
+        window.location.href = `lifejourney2024.html?${params}`; // Redirecionar para conteudo.html com os parâmetros na URL
+      })
+      .catch(error => {
+        console.error('Erro no cadastro:', error);
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,1 +1,1 @@
-Front de ApiNodeJs [repositorio: lifejourney]
+Front de ApiNodeJs [repositorio: lifejourney] https://github.com/FellipelliDev/lifejourney

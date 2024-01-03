@@ -19,7 +19,6 @@
     }
     </style>
 
-
 </head>
 <body>
 
@@ -55,8 +54,6 @@
       .then(data => {
         if (data.result && data.result.senha === password) {
           console.log('Autenticação bem-sucedida');
-          // const params = new URLSearchParams(data.result).toString();
-          // window.location.href = `lifejourney2024.html?${params}`;
           sessionStorage.setItem('dadosLogin', JSON.stringify(data.result)); 
           window.location.href = 'lifejourney2024.html';
         } else {

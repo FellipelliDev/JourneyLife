@@ -43,13 +43,95 @@
 
     </div>
 
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("audioPlayer");
+            audio.play();
+        }
+
+        function playNextAudio() {
+            var audio2 = document.getElementById("audioPlayer2");
+            setTimeout(function() {
+                audio2.play();
+            }, 2000); // Aguarda 3 segundos antes de iniciar o próximo áudio
+        }
+
+        function playAudioMultiple(audioPlayer) {
+            var audio = document.getElementById(audioPlayer);
+            audio.play();
+        }
+
+    </script>
+
     <section id="pg01" style="margin-top: 100px;">
         <h1>LifeJourney Felipelli</h1>
         <h3>2023 « » 2024</h3>
     </section>
 
+    <audio id="audioPlayer" onended="playNextAudio()" controls style="display: none;">
+        <source src="mp3/001.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+      </audio>
+
+      <audio id="audioPlayer2" controls style="display: none;">
+        <source src="mp3/002.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+      </audio>
+
+      <audio id="audioPlayer3" controls style="display: none;">
+        <source src="mp3/003.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+      </audio>
+
+      <audio id="audioPlayer4" controls style="display: none;">
+        <source src="mp3/004.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+      </audio>
+
+      <audio id="audioPlayer5" controls style="display: none;">
+        <source src="mp3/005.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+      </audio>
+
+      <audio id="audioPlayer6" controls style="display: none;">
+        <source src="mp3/006.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+      </audio>
+
+      <audio id="audioPlayer7" controls style="display: none;">
+        <source src="mp3/007.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+      </audio>
+
+      <audio id="audioPlayer8" controls style="display: none;">
+        <source src="mp3/008.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+      </audio>
+
+      <audio id="audioPlayer9" controls style="display: none;">
+        <source src="mp3/009.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+      </audio>
+
+      <audio id="audioPlayer10" controls style="display: none;">
+        <source src="mp3/010.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+      </audio>
+
+      <audio id="audioPlayer11" controls style="display: none;">
+        <source src="mp3/011.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+      </audio>
+
+      <audio id="audioPlayer12" controls style="display: none;">
+        <source src="mp3/012.mp3" type="audio/mp3">
+        Seu navegador não suporta a reprodução de áudio.
+      </audio>
+
     <section id="pg02">
-        <h1>Boas-vindas</h1>
+        <div class="number"><a onclick="playAudio()"><i style="font-size: 30px; margin-top: 20px; color: rgb(115, 115, 131);" class='bx bxs-microphone-alt'></i></a></div>
+        <h1>Seja Bem-vindo</h1>
         <h2>O que é isto?</h2>
         <p>É um LifeJourney Fellipelli — o seu próprio LifeJourney, para ser exato.</p>
         <p>Ele é um formulário que ajuda você a refletir sobre o ano que passou e planejar o próximo.</p>
@@ -71,6 +153,7 @@
     </section>
 
     <section id="pg03">
+        <div class="number"><a onclick="playAudioMultiple('audioPlayer2')"><i style="font-size: 30px; margin-top: 20px; color: rgb(115, 115, 131);" class='bx bxs-microphone-alt'></i></a></div>
         <h1>Prepare-se</h1>
         <h2>Vamos começar.</h2>
         <h3>Prepare suas ferramentas e o espaço ao seu redor.</h3>
@@ -80,7 +163,7 @@
     </section>
 <form id="editForm">
     <section id="pg04">
-        <div class="number">2023</div>
+        <div class="number"><a onclick="playAudioMultiple('audioPlayer3')"><i style="font-size: 30px; margin-top: 20px; color: rgb(115, 115, 131);" class='bx bxs-microphone-alt'></i></a></div>
         <h1>O ano passado</h1>
         <h3>Revisando seu ano</h3>
         <p>Reveja seu calendário do ano passado semana a semana.</p>
@@ -89,7 +172,7 @@
     </section>
 
     <section id="pg05">
-        <div class="number">2023</div>
+        <div class="number"><a onclick="playAudioMultiple('audioPlayer4')"><i style="font-size: 30px; margin-top: 20px; color: rgb(115, 115, 131);" class='bx bxs-microphone-alt'></i></a></div>
         <h1>O ano passado</h1>
         <h3>Meu ano passado foi sobre</h3>
         <p>Vivemos nossas vidas por meio de aspectos distintos mas interconectados. </p>
@@ -115,7 +198,7 @@
     </section>
 
     <section id="pg06">
-        <div class="number">2023</div>
+        <div class="number"><a onclick="playAudioMultiple('audioPlayer5')"><i style="font-size: 30px; margin-top: 20px; color: rgb(115, 115, 131);" class='bx bxs-microphone-alt'></i></a></div>
         <h1>O ano passado</h1>
         <h3>Seis frases sobre o ano que passou</h3>
         <p>A decisão mais sábia que eu tomei...</p>
@@ -133,7 +216,7 @@
     </section>
 
     <section id="pg07">
-        <div class="number">2023</div>
+        <div class="number"><a onclick="playAudioMultiple('audioPlayer6')"><i style="font-size: 30px; margin-top: 20px; color: rgb(115, 115, 131);" class='bx bxs-microphone-alt'></i></a></div>
         <h1>O ano passado</h1>
         <h3>Seis perguntas sobre o ano que passou</h3>
         <p>O que mais te orgulha?</p>
@@ -151,7 +234,7 @@
     </section>
 
     <section id="pg08">
-        <div class="number">2023</div>
+        <div class="number"><a onclick="playAudioMultiple('audioPlayer7')"><i style="font-size: 30px; margin-top: 20px; color: rgb(115, 115, 131);" class='bx bxs-microphone-alt'></i></a></div>
         <h1>O ano passado</h1>
         <h3>Os melhores momentos</h3>
         <p>Descreva os momentos mais agradáveis, alegres e marcantes do último ano.</p>
@@ -162,7 +245,7 @@
     </section>
 
     <section id="pg09">
-        <div class="number">2023</div>
+        <div class="number"><a onclick="playAudioMultiple('audioPlayer8')"><i style="font-size: 30px; margin-top: 20px; color: rgb(115, 115, 131);" class='bx bxs-microphone-alt'></i></a></div>
         <h1>O ano passado</h1>
         <h3>Três das minhas maiores realizações</h3>
         <p>Liste aqui seus três maiores sucessos do ano passado.</p>
@@ -182,7 +265,7 @@
     </section>
 
     <section id="pg10">
-        <div class="number">2023</div>
+        <div class="number"><a onclick="playAudioMultiple('audioPlayer9')"><i style="font-size: 30px; margin-top: 20px; color: rgb(115, 115, 131);" class='bx bxs-microphone-alt'></i></a></div>
         <h1>O ano passado</h1>
         <h3>Perdão</h3>
         <p>Aconteceu algo durante o ano passado que ainda precisa ser perdoado? </p>
@@ -194,7 +277,7 @@
     </section>
 
     <section id="pg11">
-        <div class="number">2023</div>
+        <div class="number"><a onclick="playAudioMultiple('audioPlayer10')"><i style="font-size: 30px; margin-top: 20px; color: rgb(115, 115, 131);" class='bx bxs-microphone-alt'></i></a></div>
         <h1>O ano passado</h1>
         <h3>Deixando partir</h3>
         <p>Há algo a mais que você precise dizer? </p>
@@ -205,7 +288,7 @@
     </section>
 
     <section id="pg12">
-        <div class="number">2023</div>
+        <div class="number"><a onclick="playAudioMultiple('audioPlayer11')"><i style="font-size: 30px; margin-top: 20px; color: rgb(115, 115, 131);" class='bx bxs-microphone-alt'></i></a></div>
         <h1>O ano passado</h1>
         <h3>O ano passado em três palavras</h3>
         <p>Escolha três palavras para definir o ano que passou.</p>
@@ -378,7 +461,7 @@
                 Attribution-NonCommercial-ShareAlike 4.0 International.
             </h6>
         </div>
-        <button class="button2"> Gerar LifeJourney</button>
+        <a class="button2" onclick="enviarEmail()"> Gerar LifeJourney</a>
     </section>
 
 </form>
@@ -386,6 +469,19 @@
     <script src="js/script.js"></script>
 
     <script src="js/autosave.js"></script>
+
+
+    <script>
+        function enviarEmail() {
+          // Armazenar o email no localStorage
+          sessionStorage.setItem('email', mail);
+          // Redirecionar para a próxima página
+          window.location.href = 'apresentacao.html';
+        }
+    </script>
+
+
+
 </body>
 
 </html>

@@ -2,6 +2,7 @@ const form = document.getElementById('editForm');
 const fields = form.querySelectorAll('input, textarea');
 let formChanged = false;
 let code = 0;
+let mail = '';
 
 function updateAPI() {
 
@@ -71,7 +72,7 @@ function preencherCampos() {
     const parametros = JSON.parse(sessionStorage.getItem('dadosLogin'));
     code =  parametros.codigo; 
     document.getElementById('caligrafia').innerText  = parametros.nome !== "null" ? parametros.nome : ' ';
-    // document.getElementById('email').value = parametros.email || '';
+    mail = parametros.email;
     // document.getElementById('telefone').value = parametros.telefone || '';
     // document.getElementById('senha').value = parametros.senha || '';
     document.getElementById('revisao_ano').value = parametros.revisao_ano !== "null" ? parametros.revisao_ano : ' ';
@@ -120,6 +121,9 @@ function preencherCampos() {
     document.getElementById('livro').value = parametros.livro !== "null" ? parametros.livro : ' ';
     document.getElementById('adeus').value = parametros.adeus !== "null" ? parametros.adeus : ' ';
 
+
+
+    
     document.getElementById('sonhar').value = parametros.sonhar !== "null" ? parametros.sonhar : ' ';
 
     document.getElementById('familia').value = parametros.familia !== "null" ? parametros.familia : ' ';

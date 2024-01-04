@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeJourney | PDF</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Allison&family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400&family=Neucha&display=swap');
+
+            body {
+               /* background-image: url('img/img013.png');
+               background-size: cover;
+                -webkit-print-color-adjust: exact; */
+                position: relative;
+                background-color: rgb(39, 40, 75);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .card {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                margin: 25px;
+                background:transparent;
+                border-radius: 8px;
+                backdrop-filter: blur(15px);
+                width: 694px;
+                height: auto;
+            }
+
+            .img {
+                position: relative;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 224px;
+                text-align: center; 
+            }
+
+            .img img {
+                width: 100%;
+                display: block;
+                height: auto;
+                background-size: cover;
+                border-top-right-radius: 8px;
+                border-top-left-radius: 8px;
+            }
+
+            .img titulo {
+                position: relative;
+                bottom: 20px;
+                transform: translate(-50%, -50%); /* Move o texto para o centro exato */
+                color: rgb(22, 2, 2); /* Define a cor do texto */
+                font-size: 30px; /* Define o tamanho da fonte */
+                background: white;
+                padding: 12px;
+                font-family: "Economica", sans-serif;
+                font-weight: 800;
+                /* border: 1px solid white; */
+                border-radius: 8px;
+                /* Outros estilos de texto conforme desejado */
+            }
+
+            .conteudo {
+                margin-top: 20px; /* Cria um espaço entre .img e .conteudo */
+                /* Outros estilos para a classe .conteudo */
+            }
+
+            .rodape {
+                position: relative;
+                margin-top: 20px; 
+                overflow: hidden; /* Para garantir que o gradiente cubra toda a área */
+            }
+
+            .rodape::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.1)), url('img/img008.png');
+                z-index: -1;
+            }
+
+
+            p {
+                color: aliceblue;
+                font-family: "Neucha", sans-serif;
+                font-size: 30px;
+                padding: 10px;
+                text-align: justify;
+                margin: 4px;
+            }
+
+            h1 {
+                color: aliceblue;
+                font-family: "Montserrat", sans-serif;
+                font-size: 40px;
+                padding: 2px;
+            }
+
+            h2 {
+                color: aliceblue;
+                font-family: "Allison", sans-serif;
+                font-size: 40px;
+                padding: 2px;
+            }
+
+</style>
+
+
+
+
+</head>
+<body id="contentToConvert" >
+    
+
+<div class="card">
+    <div class="img">
+        <img src="img/image22.jpeg" alt="">
+        <titulo>Revisando seu ano</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="revisao_ano" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image10.jpeg" alt="">
+        <titulo>Pessoal</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="pessoal" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image30.jpeg" alt="">
+        <titulo>Carreira</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="carreira" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <!-- ok -->
+        <img src="img/image03.jpeg" alt="">
+        <titulo>Amigos</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="amigos" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image08.jpeg" alt="">
+        <titulo>Descanso</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="descanso" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image09.jpeg" alt="">
+        <titulo>Fisica</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="fisica" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image19.jpeg" alt="">
+        <titulo>Saúde Mental</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="mental" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image18.jpeg" alt="">
+        <titulo>Habitos</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="habitos" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image20.jpeg" alt="">
+        <titulo>Amanhã</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="amanha" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="img">
+        <img src="img/image13.jpeg" alt="">
+        <titulo>Sabia</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="sabia" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image26.jpeg" alt="">
+        <titulo>lição</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="licao" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image33.jpeg" alt="">
+        <titulo>Risco</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="risco" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image23.jpeg" alt="">
+        <titulo>Surpresa</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="surpresa" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image17.jpeg" alt="">
+        <titulo>Importante</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="importante" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image11.jpeg" alt="">
+        <titulo>Coisa</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="coisa" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image25.jpeg" alt="">
+        <titulo>Orgulho</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="orgulho" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image32.jpeg" alt="">
+        <titulo>Os Três...</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="ostres" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image31.jpeg" alt="">
+        <titulo>Influença</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="influenca" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image28.jpeg" alt="">
+        <titulo>Alcançar</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="alcancar" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image01.jpeg" alt="">
+        <titulo>Descoberta</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="descoberta" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="img">
+        <img src="img/image27.jpeg" alt="">
+        <titulo>Grato</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="grato" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="img">
+        <img src="img/image04.jpeg" alt="">
+        <titulo>Momentos</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="momentos" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image21.jpeg" alt="">
+        <titulo>Realizacoes</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="realizacoes" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image29.jpeg" alt="">
+        <titulo>Atos</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="atos" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image24.jpeg" alt="">
+        <titulo>Ajuda</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="ajuda" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image02.jpeg" alt="">
+        <titulo>Desafios</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="desafios" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image30.jpeg" alt="">
+        <titulo>Superar</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="superar" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image15.jpeg" alt="">
+        <titulo>Aprender</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="aprender" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="img">
+        <img src="img/image12.jpeg" alt="">
+        <titulo>Perdão</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="perdao" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image14.jpeg" alt="">
+        <titulo>Deixando Partir</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p>Coisas das quais você precisou se libertar para poder começar o próximo ano com sucesso...</p>
+        <p id="partir" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="img">
+        <img src="img/image34.jpeg" alt="">
+        <titulo>Palavras</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado... estas três palavras definiram seu ano passado... </p><br>
+        <p id="palavra1" ></p> , <p id="palavra2" ></p> , <p id="palavra3" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image07.jpeg" alt="">
+        <titulo>Livro contando a história do seu ano passado</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>O Título seria:</p><br>
+        <p id="livro" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<div class="card">
+    <div class="img">
+        <img src="img/image06.jpeg" alt="">
+        <titulo>Adeus...</titulo>
+    </div>
+
+    <div class="conteudo">
+        <p>No ano passado...</p><br>
+        <p id="adeus" ></p>
+    </div>
+
+    <div class="rodape">
+        <img src="" alt="">
+    </div>
+</div>
+
+<a target="_blank" class="config" onclick="generatePDF()" onmouseenter="showTooltip('tt_print')" onmouseleave="hideTooltip('tt_print')"><i class='bx bx-printer'></i>
+    <span class="tooltipmenu" id="tt_print">Imprima seu <br> Cartão Vitual</span>
+</a>
+
+
+
+
+
+<script>
+    
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const email = sessionStorage.getItem('email');
+      fetch(`http://wheelkorner.com.br:21142/api/journeymail/${email}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Falha ao buscar o usuário');
+        }
+      })
+      .then(data => {
+        const dados = JSON.parse(JSON.stringify(data.result));
+        document.getElementById('revisao_ano').innerText = dados.revisao_ano !== "null" ? dados.revisao_ano : '...';
+        document.getElementById('pessoal').innerText = dados.pessoal !== "null" ? dados.pessoal : '... ';
+        document.getElementById('carreira').innerText = dados.carreira !== "null" ? dados.carreira : '... ';
+        document.getElementById('amigos').innerText = dados.amigos !== "null" ? dados.amigos : '... ';
+        document.getElementById('descanso').innerText = dados.descanso !== "null" ? dados.descanso : '... ';
+        document.getElementById('fisica').innerText = dados.fisica !== "null" ? dados.fisica : '... ';
+        document.getElementById('mental').innerText = dados.mental !== "null" ? dados.mental : '... ';
+        document.getElementById('habitos').innerText = dados.habitos !== "null" ? dados.habitos : '... ';
+        document.getElementById('amanha').innerText = dados.amanha !== "null" ? dados.amanha : '... ';
+
+        document.getElementById('sabia').innerText = dados.sabia !== "null" ? dados.sabia : '... ';
+        document.getElementById('licao').innerText = dados.licao !== "null" ? dados.licao : '... ';
+        document.getElementById('risco').innerText = dados.risco !== "null" ? dados.risco : '... ';
+        document.getElementById('surpresa').innerText = dados.surpresa !== "null" ? dados.surpresa : '... ';
+        document.getElementById('importante').innerText = dados.importante !== "null" ? dados.importante : '... ';
+        document.getElementById('coisa').innerText = dados.coisa !== "null" ? dados.coisa : '... ';
+
+        document.getElementById('orgulho').innerText = dados.orgulho !== "null" ? dados.orgulho : '... ';
+        document.getElementById('ostres').innerText = dados.ostres !== "null" ? dados.ostres : '... ';
+        document.getElementById('influenca').innerText = dados.influenca !== "null" ? dados.influenca : '... ';
+        document.getElementById('alcancar').innerText = dados.alcancar !== "null" ? dados.alcancar : '... ';
+        document.getElementById('descoberta').innerText = dados.descoberta !== "null" ? dados.descoberta : '... ';
+        document.getElementById('grato').innerText = dados.grato !== "null" ? dados.grato : '... ';
+
+        document.getElementById('momentos').innerText = dados.momentos !== "null" ? dados.momentos :'... ';
+
+        document.getElementById('realizacoes').innerText = dados.realizacoes !== "null" ? dados.realizacoes : '... ';
+        document.getElementById('atos').innerText = dados.atos !== "null" ? dados.atos : '... ';
+        document.getElementById('ajuda').innerText = dados.ajuda !== "null" ? dados.ajuda : '... ';
+        document.getElementById('desafios').innerText = dados.desafios !== "null" ? dados.desafios :'... ';
+        document.getElementById('superar').innerText = dados.superar !== "null" ? dados.superar : '... ';
+        document.getElementById('aprender').innerText = dados.aprender !== "null" ? dados.aprender : '... ';
+
+        document.getElementById('perdao').innerText = dados.perdao !== "null" ? dados.perdao : '... ';
+        document.getElementById('partir').innerText = dados.partir !== "null" ? dados.partir : '... ';
+
+        document.getElementById('palavra1').innerText = dados.palavra1 !== "null" ? dados.palavra1 : ' ';
+        document.getElementById('palavra2').innerText = dados.palavra2 !== "null" ? dados.palavra2 : ' ';
+        document.getElementById('palavra3').innerText = dados.palavra3 !== "null" ? dados.palavra3 : ' ';
+        document.getElementById('livro').innerText = dados.livro !== "null" ? dados.livro : ' ';
+        document.getElementById('adeus').innerText = dados.adeus !== "null" ? dados.adeus : ' ';
+
+
+
+
+
+
+
+      })
+      .catch(error => {
+        console.error('Erro de login:', error);
+      });
+
+
+});
+
+
+function generatePDF() {
+    const element = document.getElementById("contentToConvert");
+
+    window.print();
+
+    setTimeout(() => {
+        button.style.display = "block";
+    }, 1000);
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>

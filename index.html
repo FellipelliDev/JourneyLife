@@ -5,24 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="um formulario">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Login LifeJourney</title>
 
   <style>
-    .logon {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 600px;
+
+    body {
+      position: relative;
+      background-color: rgb(13, 38, 77);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
+
+    section{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid white;
+      border-radius: 10px;
+      width: 80%;
+      height: 80%;
+    }
+
+    .input {
+      margin: 30px;
+      background: none;
+      border: none;
+      outline: none;
+      max-width: 190px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 9999px;
+      box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+      background: transparent;
+    }
+
     </style>
 
 </head>
 <body>
 
 <section class="logon" >    
+  <div class="header">
+    <img src="img/Logo.png" alt="" width="350px">
+  </div>
+
+
   <form id="loginForm">
     <label for="email">Email:</label>
     <input type="text" id="email" name="email" required><br><br>
@@ -30,6 +65,12 @@
     <input type="password" id="password" name="password" required><br><br>
     <button class="button2" type="submit" >Entrar</button>
   </form>
+
+
+
+  <div class="rodape">
+    teste
+  </div>
 </section>
 
   <script>
